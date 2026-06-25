@@ -2,8 +2,13 @@
 using namespace std;
 
 int main(){
+    cout << "========================================" << endl;
+    cout << "   ORDENADOR ALFABETICO DE LINEAS (F)   " << endl;
+    cout << "========================================" << endl;
+    cout << "Ingrese la linea de texto a ordenar: " << endl;
     char frase[103];
-    cin.getline(frase, 105);
+    cin.getline(frase, 103);
+
     char letterpure[103];
     int cant=0;
     for(int i=0; frase[i]!='\0'; i++){
@@ -11,6 +16,9 @@ int main(){
             letterpure[cant++]=frase[i];
         }
     }
+    cout << "----------------------------------------" << endl;
+    cout << "Resultado con las letras ordenadas:" << endl;
+    cout << "----------------------------------------" << endl;
     for(int i=0; i<cant-1; i++){
         for(int j=0; j<cant-i-1; j++){
             if(letterpure[j]>letterpure[j+1]){
@@ -29,6 +37,6 @@ int main(){
             cout<<letterpure[indi++];
         }
     }
-    cout<<"\n";
+    cout << "\n========================================" << endl;
     return 0;
 }
